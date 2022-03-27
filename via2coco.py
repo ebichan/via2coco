@@ -108,7 +108,7 @@ class Via2CocoConverter:
                     height = np.max(py) - np.min(py)
                     poly = [(x + 0.5, y + 0.5) for x, y in zip(px, py)]
                     poly = [p for x in poly for p in x]
-                    bbox = [np.min(px), np.max(py), np.max(px) - np.min(py), np.max(py) - np.min(py)]
+                    bbox = [np.min(px), np.min(py), width, height]
                     coco_annotations['bbox'] = [round(float(x)) for x in bbox]
                     coco_annotations['segmentation'].append(poly)
                     polygon = Polygon(list(zip(px, py)))
