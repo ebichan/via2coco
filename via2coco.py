@@ -1,4 +1,3 @@
-from asyncio.log import logger
 import json
 import os
 import cv2
